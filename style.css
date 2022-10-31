@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --Medium: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--VeryDarkBlue);
+  font-family: overpass;
+  font-size: 15px;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.container-card {
+  background-color: var(--DarkBlue);
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-text {
+}
+.container-text img {
+  background-color: hsl(213, 19%, 22%);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.container-text h1 {
+  color: var(--White);
+  margin: 20px 0 10px 0;
+}
+.container-text p {
+  color: var(--LightGrey);
+  margin-bottom: 20px;
+}
+.container-selection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 0px;
+  padding-right: 20px;
+}
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Medium);
+  background-color: hsl(213, 19%, 22%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 20px;
+}
+.container-selection span:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.btn button {
+  background-color: var(--Orange);
+  width: 330px;
+  border-radius: 20px;
+  padding: 15px 0;
+  color: var(--White);
+  font-weight: 700;
+  border: none;
+  margin-top: 30px;
+  margin-right: 10px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.btn button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+.isactive {
+  color: var(--White);
+  background-color: var(--LightGrey);
+}
+
+.thank-you {
+  display: none;
+}
+
+.card-thank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-thank .selected {
+  color: var(--Orange);
+  background-color: hsl(213, 19%, 22%);
+  padding: 0px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-thank .selected span {
+  color: var(--Orange);
+  margin-right: -15px;
+}
+.card-thank img {
+  margin-bottom: 20px;
+}
+.card-thank h2 {
+  margin: 20px 0;
+  color: var(--White);
+}
+
+.card-thank p {
+  text-align: center;
+  color: var(--LightGrey);
+}
+
+@media screen and (max-width: 380px) {
+  .container-card {
+    width: 350px;
+  }
+  .btn button {
+    width: 300px;
+  }
+  span {
+    margin-right: 10px;
+  }
+}
